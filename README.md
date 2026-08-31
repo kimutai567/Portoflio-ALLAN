@@ -48,7 +48,8 @@ php -S localhost:8000
 
 ## Admin Page
 
-Open `/admin_reviews.php` to manage reviews and view contact messages.
+Open `/admin_reviews.php` to manage reviews and view contact messages 
+There contact button for whatsapp, telegram and discord
 
 Set an admin password before using the page. The application reads `PORTFOLIO_ADMIN_PASSWORD`; if it is not set, the fallback password is `change-this-password`.
 
