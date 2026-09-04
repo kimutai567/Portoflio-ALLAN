@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allan Kimutai | Creative Portfolio</title>
+    <link rel="stylesheet" href="style.css?v=20260831">
+    <style>
+        #hero-title {
+            font-size: 2.4rem !important;
+            line-height: 0.95 !important;
+            letter-spacing: -0.06em !important;
+        }
+
+        @media (max-width: 780px) {
+            #hero-title {
+                font-size: 2.2rem !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="#top" aria-label="Allan Kimutai home">AK<span>.</span></a>
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="#about">About</a>
+            <a href="#work">My skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <a class="header-link" href="#contact">Let's talk <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main id="top">
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-copy">
+                <p class="eyebrow">Designer · Developer · Creator, sportman</p>
+                <h1 id="hero-title">I make ideas<br><em>impossible</em><br>to ignore.</h1>
+                <p class="hero-intro">I'm Allan Kimutai, a multidisciplinary creative building thoughtful digital experiences with purpose and personality.</p>
+                <a class="primary-link" href="#work">Explore my work <span aria-hidden="true">↓</span></a>
+            </div>
+            <div class="hero-portrait">
+                <img src="images/background.png.jpg" alt="Portrait of Allan Kimutai">
+                <p class="portrait-caption">Based in Nairobi, Kenya<br>Available worldwide</p>
+            </div>
+        </section>
+
+        <section class="ticker reveal" aria-label="Services">
+            <p>My skills</p>
+            <div>Brand identity <span>✳</span> Digital products <span>✳</span> Creative direction <span>✳</span></div>
+        </section>
+
+        <section class="about-section reveal" id="about">
+            <div class="about-heading">
+                <p class="eyebrow">About me</p>
+                <h2>Curious by nature.<br>Precise by practice.</h2>
+            </div>
+            <div class="about-content">
+                <p class="about-lead">I'm Allan Kimutai, a Nairobi-based developer and creative who enjoys turning ideas into useful, well-crafted digital experiences.</p>
+                <p class="about-copy">My work brings together web development, data analysis, and computer hardware management. I care about understanding the real problem first, then building solutions that are clear, reliable, and easy to use.</p>
+                <div class="about-details">
+                    <div>
+                        <span class="about-detail-label">Based in</span>
+                        <strong>Nairobi, Kenya</strong>
+                    </div>
+                    <div>
+                        <span class="about-detail-label">Focus</span>
+                        <strong>Digital experiences</strong>
+                    </div>
+                    <div>
+                        <span class="about-detail-label">Outside work</span>
+                        <strong>Sport and learning</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="placeholder-section reveal" id="work">
+            <p class="eyebrow">My skills</p>
+            <h2>Building with code.<br>Thinking with data.</h2>
+            <div class="skills-grid">
+                <div class="skill-group">
+                    <p class="skill-group-label">Development</p>
+                    <p class="skill-list">PHP · MySQL · JavaScript · Computer hardware management</p>
+                </div>
+                <div class="skill-group">
+                    <p class="skill-group-label">Data analysis</p>
+                    <p class="skill-list">Power BI · Excel · Python · R</p>
+                </div>
+            </div>
+            <ul class="skills-principles">
+                <li>Data-informed development. User-focused design.</li>
+                <li>Bridging the gap between analytical insight and full-stack execution.</li>
+                <li>Architecting web experiences backed by deep data analysis.</li>
+            </ul>
+        </section>
+
+        <section class="gallery-section reveal" id="gallery">
+            <p class="eyebrow">My Gallery</p>
+            <h2>Snapshots of my work<br>& creative journey.</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-image="images/screenshot1.png.png">
+                    <img src="images/screenshot1.png.png" alt="Portfolio image 1">
+                    <div class="gallery-overlay">Click to enlarge</div>
+                </div>
+                <div class="gallery-item" data-image="images/Screenshot (3).png">
+                    <img src="images/Screenshot (3).png" alt="Portfolio image 2">
+                    <div class="gallery-overlay">Click to enlarge</div>
+                </div>
+                <div class="gallery-item" data-image="images/Screenshot (2).png.png">
+                    <img src="images/Screenshot (2).png.png" alt="Portfolio image 3">
+                    <div class="gallery-overlay">Click to enlarge</div>
+                </div>
+                <div class="gallery-item" data-image="images/Screenshot (4).png">
+                    <img src="images/Screenshot (4).png" alt="Portfolio image 4">
+                    <div class="gallery-overlay">Click to enlarge</div>
+                </div>
+                <div class="gallery-item" data-image="images/Screenshot (5).png">
+                    <img src="images/Screenshot (5).png" alt="Portfolio image 5">
+                    <div class="gallery-overlay">Click to enlarge</div>
+                </div>
+                <div class="gallery-item" data-image="images/Screenshot (6).png">
+                    <img src="images/Screenshot (6).png" alt="Portfolio image 6">
+                    <div class="gallery-overlay">Click to enlarge</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lightbox Modal -->
+        <div id="lightbox" class="lightbox">
+            <div class="lightbox-content">
+                <img id="lightbox-image" src="" alt="">
+                <button class="lightbox-close">&times;</button>
+                <button class="lightbox-prev">&#10094;</button>
+                <button class="lightbox-next">&#10095;</button>
+            </div>
+        </div>
+        <section class="placeholder-section reveal" id="contact">
+            <p class="eyebrow">Have a project in mind?</p>
+            <h2>Let's make<br>something matter.</h2>
+            <div class="contact-container">
+                <form class="contact-form" action="contact.php" method="post">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" required>
+
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" required>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <button type="submit">Send message <span aria-hidden="true">↗</span></button>
+                </form>
+                <div class="contact-methods">
+                    <p class="contact-methods-label">Connect via</p>
+                    <div class="social-buttons">
+                        <a href="https://wa.me/254702346235" class="social-button whatsapp" aria-label="WhatsApp">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004c-1.652 0-3.267.647-4.458 1.781C6.182 11.322 5.518 13.023 5.518 14.81c0 .524.069 1.047.206 1.553L5.52 20.73l6.533-1.696c.457.259.925.487 1.443.67 1.232.399 2.521.406 3.74.111 3.305-.686 5.746-3.645 5.746-7.152 0-1.951-.78-3.785-2.196-5.162-1.414-1.377-3.295-2.135-5.288-2.136z"/>
+                            </svg>
+                            WhatsApp
+                        </a>
+                        <a href="https://instagram.com/kimutai.al" class="social-button instagram" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163C8.756 0 8.33.012 7.052.07 2.696.272.273 2.69.07 7.052.012 8.33 0 8.757 0 12c0 3.244.011 3.672.07 4.948.197 4.354 2.617 6.78 6.979 6.98 1.281.058 1.7.07 4.948.07 3.247 0 3.668-.012 4.947-.07 4.354-.2 6.782-2.617 6.979-6.979.059-1.276.07-1.700.07-4.948 0-3.244-.011-3.672-.07-4.948-.197-4.354-2.617-6.78-6.98-6.979C15.668.012 15.259 0 12 0z"/>
+                                <path d="M12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm4.965-10.322a1.44 1.44 0 110-2.881 1.44 1.44 0 010 2.881z"/>
+                            </svg>
+                            Instagram
+                        </a>
+                        <a href="https://t.me/Kycweb" class="social-button telegram" aria-label="Telegram">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a11.955 11.955 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.96 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.365-1.337.185-.437-.148-1.33-.414-1.98-.742-.797-.426-1.429-1.006-1.38-1.59.046-.526.217-.991.95-2.117.231-.369.44-.777.639-1.218.399-.868.57-1.637.45-1.945-.14-.384-.365-.643-.737-.814-.202-.096-.412-.12-.61-.112-.144.01-.numerator.017-.21.024l-.052.01z"/>
+                            </svg>
+                            Telegram
+                        </a>
+                        <a href="https://discordapp.com/users/allanekimutai5396" class="social-button discord" aria-label="Discord">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                <path d="M20.317 4.3671a19.8047 19.8047 0 0 0-4.8852-1.5152.074.074 0 0 0-.0787.0366c-.211.375-.444.864-.607 1.25a18.254 18.254 0 0 0-5.487 0c-.163-.386-.395-.875-.607-1.25a.077.077 0 0 0-.0787-.0366 19.7594 19.7594 0 0 0-4.8854 1.515.0699.0699 0 0 0-.032.0277C1.328 8.07.8303 11.7829 1.0957 15.4377a.083.083 0 0 0 .0317.0554 19.8846 19.8846 0 0 0 5.9837 3.0051.084.084 0 0 0 .091-.0395c.482-.83.911-1.705 1.275-2.612a.08.08 0 0 0-.044-.111 13.107 13.107 0 0 1-1.872-.892.083.083 0 0 1-.008-.138 10.33 10.33 0 0 0 .372-.294.081.081 0 0 1 .084-.012c3.928 1.793 8.18 1.793 12.062 0a.081.081 0 0 1 .084.013 9.9 9.9 0 0 0 .372.292.083.083 0 0 1-.006.137 13.047 13.047 0 0 1-1.872.892.083.083 0 0 0-.044.111c.364.907.793 1.782 1.275 2.612a.084.084 0 0 0 .09.04 19.857 19.857 0 0 0 5.994-3.004.084.084 0 0 0 .031-.056c.351-3.688-.59-6.901-2.496-9.748a.06.06 0 0 0-.031-.028zM8.02 12.6775c-1.1935 0-2.1773-.983-2.1773-2.1889 0-1.205.9838-2.1889 2.1773-2.1889 1.194 0 2.1889.983 2.1654 2.1889 0 1.205-.9739 2.1889-2.1654 2.1889zm7.9437 0c-1.1935 0-2.1773-.983-2.1773-2.1889 0-1.205.9838-2.1889 2.1773-2.1889 1.194 0 2.189.983 2.1654 2.1889 0 1.205-.9739 2.1889-2.1654 2.1889z"/>
+                            </svg>
+                            Discord
+                        </a>
+                        <a href="https://www.linkedin.com/in/allan-kimutai-682482430/" class="social-button linkedin" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V8.98h3.42v1.57h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.29zM5.32 7.41a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM3.54 20.45H7.1V8.98H3.54v11.47zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/>
+                            </svg>
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <button class="reviews-button" type="button" aria-haspopup="dialog" aria-controls="reviews-modal">
+        Reviews <span aria-hidden="true">↗</span>
+    </button>
+
+    <div class="reviews-modal" id="reviews-modal" role="dialog" aria-modal="true" aria-labelledby="reviews-title" hidden>
+        <div class="reviews-modal-content">
+            <button class="reviews-close" type="button" aria-label="Close reviews">&times;</button>
+            <p class="eyebrow">Reviews</p>
+            <h2 id="reviews-title">What people say<br>about working with me.</h2>
+            <div class="reviews-grid" id="reviews-list">
+                <article class="review-card">
+                    <div class="review-card-top"><h3>Sandra</h3><span class="review-stars" aria-label="4 out of 5 stars">★★★★<span>★</span></span></div>
+                    <p>“Good work. Everything was handled clearly and delivered with care.”</p>
+                </article>
+                <article class="review-card">
+                    <div class="review-card-top"><h3>Amon</h3><span class="review-stars" aria-label="5 out of 5 stars">★★★★★</span></div>
+                    <p>“Perfect work from start to finish. The result was exactly what I needed.”</p>
+                </article>
+                <article class="review-card">
+                    <div class="review-card-top"><h3>Able</h3><span class="review-stars" aria-label="5 out of 5 stars">★★★★★</span></div>
+                    <p>“Nice work. Professional, thoughtful, and easy to collaborate with.”</p>
+                </article>
+            </div>
+            <form class="review-form" id="review-form" action="review.php" method="post">
+                <p class="contact-methods-label">Add your review</p>
+                <label for="review-name">Your name</label>
+                <input id="review-name" name="name" type="text" maxlength="100" required>
+                <label for="review-rating">Rating</label>
+                <select id="review-rating" name="rating" required>
+                    <option value="5">5 stars</option>
+                    <option value="4">4 stars</option>
+                    <option value="3">3 stars</option>
+                    <option value="2">2 stars</option>
+                    <option value="1">1 star</option>
+                </select>
+                <label for="review-message">Your review</label>
+                <textarea id="review-message" name="message" rows="3" maxlength="2000" required></textarea>
+                <div class="review-form-actions">
+                    <button type="submit">Add review <span aria-hidden="true">↗</span></button>
+                    <button class="secondary-button" type="reset">Clear form</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <button class="back-to-top" type="button" aria-label="Back to top">Back to top <span aria-hidden="true">↑</span></button>
+
+    <script>
+        // Ask user before opening social media apps
+        document.addEventListener('DOMContentLoaded', function() {
+            const socialButtons = document.querySelectorAll('.social-button');
+            console.log('Found ' + socialButtons.length + ' social buttons');
+            
+            socialButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const appName = this.getAttribute('aria-label');
+                    const url = this.getAttribute('href');
+                    
+                    console.log('Button clicked: ' + appName);
+                    
+                    if (confirm(`Do you want to continue to open ${appName}?`)) {
+                        window.open(url, '_blank');
+                    }
+                });
+            });
+        });
+
+        // Reveal content as it enters the viewport
+        document.addEventListener('DOMContentLoaded', function() {
+            const revealItems = document.querySelectorAll('.reveal, .gallery-item');
+            const revealObserver = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(function(entry) {
+                    if (!entry.isIntersecting) return;
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                });
+            }, { threshold: 0.12 });
+
+            revealItems.forEach(function(item, index) {
+                item.style.setProperty('--reveal-delay', `${Math.min(index * 70, 350)}ms`);
+                revealObserver.observe(item);
+            });
+        });
+
+        // Gallery Lightbox Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightbox-image');
+            const closeBtn = document.querySelector('.lightbox-close');
+            const prevBtn = document.querySelector('.lightbox-prev');
+            const nextBtn = document.querySelector('.lightbox-next');
+            let currentImageIndex = 0;
+            let allImages = Array.from(galleryItems).map(item => item.getAttribute('data-image'));
+
+            // Open lightbox
+            galleryItems.forEach((item, index) => {
+                item.addEventListener('click', function() {
+                    currentImageIndex = index;
+                    lightboxImage.src = this.getAttribute('data-image');
+                    lightbox.classList.add('active');
+                });
+            });
+
+            // Close lightbox
+            closeBtn.addEventListener('click', function() {
+                lightbox.classList.remove('active');
+            });
+
+            // Previous image
+            prevBtn.addEventListener('click', function() {
+                currentImageIndex = (currentImageIndex - 1 + allImages.length) % allImages.length;
+                lightboxImage.src = allImages[currentImageIndex];
+            });
+
+            // Next image
+            nextBtn.addEventListener('click', function() {
+                currentImageIndex = (currentImageIndex + 1) % allImages.length;
+                lightboxImage.src = allImages[currentImageIndex];
+            });
+
+            // Close lightbox when clicking outside image
+            lightbox.addEventListener('click', function(e) {
+                if (e.target === lightbox) {
+                    lightbox.classList.remove('active');
+                }
+            });
+
+            // Keyboard navigation
+            document.addEventListener('keydown', function(e) {
+                if (!lightbox.classList.contains('active')) return;
+                
+                if (e.key === 'ArrowLeft') prevBtn.click();
+                if (e.key === 'ArrowRight') nextBtn.click();
+                if (e.key === 'Escape') closeBtn.click();
+            });
+        });
+
+        // Reviews modal and approved database reviews
+        document.addEventListener('DOMContentLoaded', function() {
+            const reviewsButton = document.querySelector('.reviews-button');
+            const reviewsModal = document.getElementById('reviews-modal');
+            const reviewsClose = document.querySelector('.reviews-close');
+            const reviewForm = document.getElementById('review-form');
+            const reviewsList = document.getElementById('reviews-list');
+            const backToTop = document.querySelector('.back-to-top');
+            function addReviewCard(review) {
+                const card = document.createElement('article');
+                const top = document.createElement('div');
+                const name = document.createElement('h3');
+                const stars = document.createElement('span');
+                const message = document.createElement('p');
+                const rating = Number(review.rating);
+
+                card.className = 'review-card';
+                top.className = 'review-card-top';
+                name.textContent = review.name;
+                stars.className = 'review-stars';
+                stars.setAttribute('aria-label', `${rating} out of 5 stars`);
+                stars.textContent = '★'.repeat(rating) + '★'.repeat(5 - rating);
+                message.textContent = `“${review.message}”`;
+                top.append(name, stars);
+                card.append(top, message);
+                reviewsList.appendChild(card);
+            }
+
+            fetch('review.php')
+                .then(response => response.json())
+                .then(data => data.reviews.forEach(addReviewCard))
+                .catch(() => {});
+
+            reviewsButton.addEventListener('click', function() {
+                reviewsModal.hidden = false;
+                reviewsClose.focus();
+            });
+
+            function closeReviews() {
+                reviewsModal.hidden = true;
+                reviewsButton.focus();
+            }
+
+            reviewsClose.addEventListener('click', closeReviews);
+            reviewsModal.addEventListener('click', function(event) {
+                if (event.target === reviewsModal) closeReviews();
+            });
+
+            reviewForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                const submitButton = reviewForm.querySelector('button[type="submit"]');
+                const review = {
+                    name: document.getElementById('review-name').value.trim(),
+                    rating: document.getElementById('review-rating').value,
+                    message: document.getElementById('review-message').value.trim()
+                };
+
+                fetch('review.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(review)
+                })
+                    .then(async response => {
+                        const responseText = await response.text();
+                        let data;
+
+                        try {
+                            data = JSON.parse(responseText);
+                        } catch (error) {
+                            throw new Error('The server returned an invalid response. Check that Apache and MySQL are running.');
+                        }
+
+                        return { ok: response.ok, data };
+                    })
+                    .then(result => {
+                        if (!result.ok) throw new Error(result.data.message || 'Review could not be submitted.');
+                        reviewForm.reset();
+                        alert('Thank you for sharing your review.');
+                    })
+                    .catch(error => alert(`Review could not be submitted: ${error.message}`))
+                    .finally(() => {
+                        submitButton.disabled = false;
+                    });
+
+                submitButton.disabled = true;
+            });
+
+            document.addEventListener('keydown', function(event) {
+                if (event.key === 'Escape' && !reviewsModal.hidden) closeReviews();
+            });
+
+            window.addEventListener('scroll', function() {
+                backToTop.classList.toggle('is-visible', window.scrollY > 500);
+            }, { passive: true });
+
+            backToTop.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
