@@ -33,7 +33,7 @@
     <main id="top">
         <section class="hero" aria-labelledby="hero-title">
             <div class="hero-copy">
-                <p class="eyebrow">Designer · Developer · Creator, sportman</p>
+                <p class="eyebrow">Designer · Developer · Creator, sportsman</p>
                 <h1 id="hero-title">I make ideas<br><em>impossible</em><br>to ignore.</h1>
                 <p class="hero-intro">I'm Allan Kimutai, a multidisciplinary creative building thoughtful digital experiences with purpose and personality.</p>
                 <a class="primary-link" href="#work">Explore my work <span aria-hidden="true">↓</span></a>
@@ -97,27 +97,27 @@
             <p class="eyebrow">My Gallery</p>
             <h2>Snapshots of my work<br>& creative journey.</h2>
             <div class="gallery-grid">
-                <div class="gallery-item" data-image="images/screenshot1.png.png">
+                <div class="gallery-item" data-image="images/screenshot1.png.png" role="button" tabindex="0" aria-label="Open portfolio image 1">
                     <img src="images/screenshot1.png.png" alt="Portfolio image 1">
                     <div class="gallery-overlay">Click to enlarge</div>
                 </div>
-                <div class="gallery-item" data-image="images/Screenshot (3).png">
+                <div class="gallery-item" data-image="images/Screenshot (3).png" role="button" tabindex="0" aria-label="Open portfolio image 2">
                     <img src="images/Screenshot (3).png" alt="Portfolio image 2">
                     <div class="gallery-overlay">Click to enlarge</div>
                 </div>
-                <div class="gallery-item" data-image="images/Screenshot (2).png.png">
+                <div class="gallery-item" data-image="images/Screenshot (2).png.png" role="button" tabindex="0" aria-label="Open portfolio image 3">
                     <img src="images/Screenshot (2).png.png" alt="Portfolio image 3">
                     <div class="gallery-overlay">Click to enlarge</div>
                 </div>
-                <div class="gallery-item" data-image="images/Screenshot (4).png">
+                <div class="gallery-item" data-image="images/Screenshot (4).png" role="button" tabindex="0" aria-label="Open portfolio image 4">
                     <img src="images/Screenshot (4).png" alt="Portfolio image 4">
                     <div class="gallery-overlay">Click to enlarge</div>
                 </div>
-                <div class="gallery-item" data-image="images/Screenshot (5).png">
+                <div class="gallery-item" data-image="images/Screenshot (5).png" role="button" tabindex="0" aria-label="Open portfolio image 5">
                     <img src="images/Screenshot (5).png" alt="Portfolio image 5">
                     <div class="gallery-overlay">Click to enlarge</div>
                 </div>
-                <div class="gallery-item" data-image="images/Screenshot (6).png">
+                <div class="gallery-item" data-image="images/Screenshot (6).png" role="button" tabindex="0" aria-label="Open portfolio image 6">
                     <img src="images/Screenshot (6).png" alt="Portfolio image 6">
                     <div class="gallery-overlay">Click to enlarge</div>
                 </div>
@@ -287,10 +287,18 @@
 
             // Open lightbox
             galleryItems.forEach((item, index) => {
-                item.addEventListener('click', function() {
+                function openLightbox() {
                     currentImageIndex = index;
-                    lightboxImage.src = this.getAttribute('data-image');
+                    lightboxImage.src = item.getAttribute('data-image');
                     lightbox.classList.add('active');
+                }
+
+                item.addEventListener('click', openLightbox);
+                item.addEventListener('keydown', function(event) {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                        event.preventDefault();
+                        openLightbox();
+                    }
                 });
             });
 
