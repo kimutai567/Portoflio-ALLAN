@@ -1,0 +1,9 @@
+{
+    "name": "kimutai567/portfolio-allan",
+    "description": "Allan Kimutai portfolio website",
+    "type": "project",
+    "require": {
+        "php": ">=8.0",
+        "phpmailer/phpmailer": "^6.9"
+    }
+}

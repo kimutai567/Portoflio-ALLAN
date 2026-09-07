@@ -148,6 +148,7 @@
                     <textarea id="message" name="message" rows="5" required></textarea>
 
                     <button type="submit">Send message <span aria-hidden="true">↗</span></button>
+                    <p class="form-status" id="contact-status" role="status" aria-live="polite"></p>
                 </form>
                 <div class="contact-methods">
                     <p class="contact-methods-label">Connect via</p>
@@ -254,6 +255,40 @@
                         window.open(url, '_blank');
                     }
                 });
+            });
+        });
+
+        // Submit the contact form without leaving the portfolio page.
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.querySelector('.contact-form');
+            const contactStatus = document.getElementById('contact-status');
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+
+            contactForm.addEventListener('submit', async function(event) {
+                event.preventDefault();
+                submitButton.disabled = true;
+                contactStatus.className = 'form-status is-loading';
+                contactStatus.textContent = 'Sending your message...';
+
+                try {
+                    const response = await fetch(contactForm.action, {
+                        method: 'POST',
+                        headers: { Accept: 'application/json' },
+                        body: new FormData(contactForm)
+                    });
+                    const data = await response.json();
+
+                    if (!response.ok) throw new Error(data.message || 'Your message could not be sent.');
+
+                    contactForm.reset();
+                    contactStatus.className = 'form-status is-success';
+                    contactStatus.textContent = data.message;
+                } catch (error) {
+                    contactStatus.className = 'form-status is-error';
+                    contactStatus.textContent = error.message;
+                } finally {
+                    submitButton.disabled = false;
+                }
             });
         });
 

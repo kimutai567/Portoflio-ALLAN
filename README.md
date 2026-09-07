@@ -44,6 +44,14 @@ Update these values if your MySQL installation uses different credentials.
 php -S localhost:8000
 ```
 
+1. Install the PHP dependencies before testing contact email notifications:
+
+```bash
+composer install
+```
+
+Commit both `composer.json` and the generated `composer.lock` file so GitHub Actions can validate and install the same dependency versions.
+
 1. Open [http://localhost:8000](http://localhost:8000) in your browser.
 
 ## Admin Page

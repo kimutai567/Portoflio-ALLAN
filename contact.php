@@ -1,5 +1,10 @@
 <?php
 
+$autoloadFile = __DIR__ . '/vendor/autoload.php';
+if (is_file($autoloadFile)) {
+    require_once $autoloadFile;
+}
+
 function sendContactConfirmationEmail(string $recipientEmail, string $recipientName): bool
 {
     $fromEmail = getenv('PORTFOLIO_CONTACT_FROM_EMAIL') ?: 'noreply@localhost';
@@ -55,6 +60,16 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
+$wantsJson = str_contains($_SERVER['HTTP_ACCEPT'] ?? '', 'application/json');
+
+function sendJsonResponse(int $statusCode, array $payload): never
+{
+    http_response_code($statusCode);
+    header('Content-Type: application/json; charset=utf-8');
+    echo json_encode($payload);
+    exit;
+}
+
 $name = trim($_POST['name'] ?? '');
 $email = trim($_POST['email'] ?? '');
 $message = trim($_POST['message'] ?? '');
@@ -63,6 +78,9 @@ if ($name === '' || $message === '' || !filter_var($email, FILTER_VALIDATE_EMAIL
     http_response_code(400);
     $title = 'Please check your message';
     $text = 'Enter your name, a valid email address, and a message.';
+    if ($wantsJson) {
+        sendJsonResponse(400, ['message' => $text]);
+    }
 } else {
     try {
         require __DIR__ . '/database.php';
@@ -83,10 +101,16 @@ if ($name === '' || $message === '' || !filter_var($email, FILTER_VALIDATE_EMAIL
         } else {
             $text = 'Thanks. Your message has been saved successfully. Email notifications are not configured on this server.';
         }
+        if ($wantsJson) {
+            sendJsonResponse(201, ['message' => $text]);
+        }
     } catch (PDOException $exception) {
         http_response_code(500);
         $title = 'Message could not be saved';
         $text = 'The server could not connect to the database. Check your MySQL setup.';
+        if ($wantsJson) {
+            sendJsonResponse(500, ['message' => $text]);
+        }
     }
 }
 ?>
