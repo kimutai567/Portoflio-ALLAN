@@ -6,16 +6,20 @@ A personal portfolio website with a responsive front end, contact form, gallery 
 
 - Portfolio landing page with About, Skills, Gallery, and Contact sections
 - Responsive layout styled with `style.css`
+- Frontend skills showcase featuring HTML, CSS, JavaScript, React, PHP, and MySQL
 - Gallery image lightbox with navigation controls
-- Contact messages stored in MySQL
+- Contact form submitted with JavaScript `fetch()` and handled by a PHP JSON endpoint
+- Contact messages stored in MySQL with an HTML fallback for non-JavaScript requests
 - Visitor reviews stored as pending and displayed after approval
 - Password-protected review administration page
 - Social links for WhatsApp, Instagram, Telegram, and Discord
+- Downloadable CV link at `documents/Allan-Kimutai-CV.pdf`
 
 ## Requirements
 
 - PHP 8.0 or newer with PDO MySQL enabled
 - MySQL or MariaDB
+- Composer
 - A browser
 
 ## Setup
@@ -80,8 +84,16 @@ Change the fallback password in `admin_reviews.php` or configure the environment
 ├── admin_reviews.php    # Review moderation and message management
 ├── database.php         # PDO database connection
 ├── schema.sql           # Database and table definitions
+├── documents/            # Downloadable CV and other documents
 └── images/              # Portfolio and background images
 ```
+
+## Technology focus
+
+- **Frontend:** HTML, CSS, JavaScript, responsive layouts, and accessibility
+- **Frontend framework knowledge:** React
+- **Backend:** PHP, PDO, MySQL, sessions, and JSON APIs
+- **Integration:** JavaScript `fetch()`, form validation, database persistence, and PHPMailer
 
 ## Email notifications
 
