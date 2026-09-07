@@ -139,6 +139,13 @@ h1 em {
     max-width: 365px;
 }
 
+.hero-actions {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+}
+
 .primary-link {
     border-bottom: 1px solid var(--accent);
     display: inline-flex;
@@ -153,6 +160,24 @@ h1 em {
 
 .primary-link:hover {
     gap: 48px;
+}
+
+.cv-link {
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    display: inline-flex;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    gap: 18px;
+    letter-spacing: 0.08em;
+    padding: 14px 16px;
+    text-transform: uppercase;
+    transition: background 180ms ease, color 180ms ease;
+}
+
+.cv-link:hover {
+    background: var(--accent);
+    color: var(--ink);
 }
 
 .hero-portrait {
