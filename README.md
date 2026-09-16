@@ -94,6 +94,7 @@ Change the fallback password in `admin_reviews.php` or configure the environment
 - **Frontend framework knowledge:** React
 - **Backend:** PHP, PDO, MySQL, sessions, and JSON APIs
 - **Integration:** JavaScript `fetch()`, form validation, database persistence, and PHPMailer
+- Interface (Chrome , Edge, firefox)
 
 ## Email notifications
 
