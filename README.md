@@ -21,6 +21,7 @@ A personal portfolio website with a responsive front end, contact form, gallery 
 - MySQL or MariaDB
 - Composer
 - A browser
+- vs code (optional)
 
 ## Setup
 
