@@ -14,6 +14,7 @@ A personal portfolio website with a responsive front end, contact form, gallery 
 - Password-protected review administration page
 - Social links for WhatsApp, Instagram, Telegram, and Discord
 - Downloadable CV link at `documents/Allan-Kimutai-CV.pdf`
+- View completeprojects and tools used
 
 ## Requirements
 
