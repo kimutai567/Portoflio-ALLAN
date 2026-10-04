@@ -23,6 +23,7 @@ A personal portfolio website with a responsive front end, contact form, gallery 
 - Composer
 - A browser
 - vs code (optional)
+- Images
 
 ## Setup
 
