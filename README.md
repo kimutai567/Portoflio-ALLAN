@@ -24,6 +24,7 @@ A personal portfolio website with a responsive front end, contact form, gallery 
 - A browser
 - vs code (optional)
 - Images
+- Windows , Linux or MacOS
 
 ## Setup
 
