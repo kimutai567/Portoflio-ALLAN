@@ -100,6 +100,7 @@ Change the fallback password in `admin_reviews.php` or configure the environment
 - **Backend:** PHP, PDO, MySQL, sessions, and JSON APIs
 - **Integration:** JavaScript `fetch()`, form validation, database persistence, and PHPMailer
 - Interface (Chrome , Edge, firefox)
+- Stable wifi
 
 ## Email notifications
 
